@@ -2000,7 +2000,3 @@ class WPOMatic {
     include(WPOTPL . 'logs.php');
   }
 }
-/* check PHP version for deprecated feature */
-if (version_compare(PHP_VERSION, '5.3.0') < 0) {
-  $wpomatic = & new WPOMatic();
-}
