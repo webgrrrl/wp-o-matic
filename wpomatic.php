@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: WP-o-Matic
-Plugin URI: https://github.com/webgrrrl/wp-o-matic
+Plugin URI: http://themeskult.com/wp-o-matic/
 Description: Automated posts via RSS feed aggregation.
-Version: 2.4.1
-Author: Themes Kult, webgrrrl
+Version: 2.4.0
+Author: Themes Kult
 Author URI: http://themeskult.com/
 */
 
@@ -77,7 +77,7 @@ class WPOMatic {
 
     # Cron command / url
     $this->cron_url = $this->pluginpath . '/cron.php?code=' . get_option('wpo_croncode');
-    $this->cron_command = attribute_escape('*/20 * * * * '. $this->getCommand() . ' ' . $this->cron_url);
+    $this->cron_command = esc_attr('*/20 * * * * '. $this->getCommand() . ' ' . $this->cron_url);
   }
 
   /**
@@ -1945,7 +1945,7 @@ class WPOMatic {
         $this->adminUpdateCampaignPosts($id, array('post_author' => $authorid));
       } else {
         $this->errno = 1;
-        $this->errors = array('tools' => array(sprintf(__('Author %s not found', 'wpomatic'), attribute_escape($_REQUEST['campaign_tool_changeauthor']))));
+        $this->errors = array('tools' => array(sprintf(__('Author %s not found', 'wpomatic'), esc_attr($_REQUEST['campaign_tool_changeauthor']))));
       }
 
       $this->tool_success = __('Posts status updated', 'wpomatic');
