@@ -1,10 +1,10 @@
 === WP-o-Matic ===
-Contributors: rrauch
+Contributors: rrauch, webgrrrl
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3FTUJLTN3ZVVG
 Tags: autoblogging, feeds, feed, rss, atom, aggregation, content, syndication, posts, Post, writing, bot, admin, automation, aggregator, page, pages, rapid, creation, generation, seo, AJAX, google, images, caching, cache, fetch, categories, category
-Requires at least: 3.0
-Tested up to: 4.0.0
-Stable tag: 2.4.0
+Requires at least: 4.3
+Tested up to: 4.3
+Stable tag: 2.4.1
 
 WP-o-Matic makes autoblogging a snap by automatically creating posts from the RSS/Atom feeds you choose, which are organized into campaigns.
 
